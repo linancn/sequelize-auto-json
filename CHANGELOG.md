@@ -5,6 +5,10 @@ All visible changes to this project will be documented in this file as of versio
 ## Master
 
 ### Fixed
+## [0.4.29] - 2019-09-05
+* export json
+* sequelize update to 5.15.1
+* /lib/utils getModle function conver json to model
 
 ## [0.4.29] - 2017-10-23
 

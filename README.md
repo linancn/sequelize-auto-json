@@ -6,6 +6,12 @@
 
 Automatically generate models for [SequelizeJS](https://github.com/sequelize/sequelize) via the command line.
 
+Support export json format
+
+Update To Sequelize 5.15.1
+
+add getModel function conver json file to model Object
+
 ## Install
 
     npm install -g sequelize-auto
@@ -50,10 +56,62 @@ Example for MSSQL
       -n, --no-write    Prevent writing the models to disk.
       -s, --schema      Database schema from which to retrieve tables
       -z, --typescript  Output models as typescript with a definitions file.
+      -j  --json        Export json format model
+### Use Json
+  - Create Json
+  ```
+  sequelize-auto -o "./models" -d dbName -h localhost -u username -p 3306 -x yourpassword -e mysql -j
+  ```
+  - Build model from json
+  ```
+  const { getModel } = require('sequelize/lib/utils')
+  const model = await getModel(sequelize, jsonfilePath)
+  ```
+  - json file format
+  ```
+  [
+    {
+      "id": {
+        "type": "DataTypes.INTEGER(11)",
+        "allowNull": false,
+        "primaryKey": true,
+        "comment": "null",
+        "autoIncrement": true
+      },
+      "dbname": {
+        "type": "DataTypes.STRING(45)",
+        "allowNull": false,
+        "autoIncrement": false,
+        "comment": "null"
+      },
+      "tablename": {
+        "type": "DataTypes.STRING(45)",
+        "allowNull": false,
+        "autoIncrement": false,
+        "comment": "null"
+      },
+      "model": {
+        "type": "DataTypes.STRING(45)",
+        "allowNull": false,
+        "autoIncrement": false,
+        "comment": "null"
+      },
+      "createdDate": {
+        "type": "DataTypes.DATE",
+        "allowNull": true,
+        "defaultValue": "CURRENT_TIMESTAMP",
+        "autoIncrement": false,
+        "comment": "null"
+      }
+    }, {
+      "tableName": "models"
+    }
+  ]
+  ```
 
 ## Example
 
-    sequelize-auto -o "./models" -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres
+    sequelize-auto -o "./models" -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres -j
 
 Produces a file/files such as ./models/Users.js which looks like:
 
@@ -146,7 +204,8 @@ var auto = new SequelizeAuto('database', 'user', 'pass', {
         timestamps: false
         //...
     },
-    tables: ['table1', 'table2', 'table3']
+    tables: ['table1', 'table2', 'table3'],
+    json: true // default is false ,export json
     //...
 })
 ```

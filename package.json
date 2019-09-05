@@ -51,8 +51,11 @@
     "async": "^2.1.5",
     "eslint": "^3.19.0",
     "graceful-fs-extra": "^2.0.0",
+    "jsonfile": "^5.0.0",
+    "loadsh": "0.0.4",
     "mkdirp": "^0.5.1",
-    "sequelize": "^3.30.2",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.15.1",
     "yargs": "^8.0.1"
   },
   "devDependencies": {
