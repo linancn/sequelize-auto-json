@@ -64,7 +64,7 @@ Example for MSSQL
   ```
   - Build model from json
   ```
-  const { getModel } = require('sequelize/lib/utils')
+  const { getModel } = require('./node_modules/sequelize/lib/utils')
   const model = await getModel(sequelize, jsonfilePath)
   ```
   - json file format
