@@ -1,7 +1,7 @@
 {
-  "name": "sequelize-auto",
-  "version": "0.4.29",
-  "description": "Automatically generate bare sequelize models from your database.",
+  "name": "sequelize-auto-json",
+  "version": "0.0.1",
+  "description": "Automatically generate bare sequelize json models from your database.",
   "main": "index",
   "keywords": [
     "mysql",
@@ -11,14 +11,14 @@
     "mapper"
   ],
   "bin": {
-    "sequelize-auto": "bin/sequelize-auto"
+    "sequelize-auto-json": "bin/sequelize-auto-json"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sequelize/sequelize-auto.git"
+    "url": "hhttps://github.com/linancn/sequelize-auto-json"
   },
   "bugs": {
-    "url": "https://github.com/sequelize/sequelize-auto/issues"
+    "url": "https://github.com/linancn/sequelize-auto-json"
   },
   "nyc": {
     "exclude": [

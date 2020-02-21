@@ -6,7 +6,7 @@ var Sequelize = require('sequelize');
 var _ = Sequelize.Utils._;
 
 var argv = require('yargs')
-  .usage('Usage: sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port]  --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName]')
+  .usage('Usage: sequelize-auto-json -h <host> -d <database> -u <user> -x [password] -p [port]  --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName]')
   .demand(['h', 'd'])
   .alias('h', 'host')
   .alias('d', 'database')

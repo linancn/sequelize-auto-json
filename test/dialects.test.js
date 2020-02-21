@@ -7,7 +7,7 @@ var dialect = helpers.getTestDialect();
 var dialects = require('../lib/dialects');
 var _ = helpers.Sequelize.Utils._
 
-describe(helpers.getTestDialectTeaser('sequelize-auto dialects'), function() {
+describe(helpers.getTestDialectTeaser('sequelize-auto-json dialects'), function() {
   describe('getForeignKeysQuery', function () {
     it('mysql', function (done) {
       var query = dialects.mysql.getForeignKeysQuery('mytable', 'mydatabase');

@@ -8,7 +8,7 @@ var dialect = helpers.getTestDialect();
 var testConfig = require('./config');
 var _ = helpers.Sequelize.Utils._;
 
-describe(helpers.getTestDialectTeaser("sequelize-auto"), function() {
+describe(helpers.getTestDialectTeaser("sequelize-auto-json"), function() {
   after(function(done) {
     helpers.clearDatabase(this.sequelize, done);
   });
@@ -70,7 +70,7 @@ describe(helpers.getTestDialectTeaser("sequelize-auto"), function() {
 
   var setupModels = function(self, callback) {
     var config = self.sequelize.config;
-    var execString = "node " + path.join(__dirname, "..", "bin", "sequelize-auto") + " -o \"" + testConfig.directory + "\" -d " + config.database + " -h " + config.host;
+    var execString = "node " + path.join(__dirname, "..", "bin", "sequelize-auto-json") + " -o \"" + testConfig.directory + "\" -d " + config.database + " -h " + config.host;
 
     if (_.has(config, 'username') && ! _.isNull(config.username))
       execString += " -u " + config.username + " ";

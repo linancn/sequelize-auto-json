@@ -9,7 +9,7 @@ var testConfig = require('./config');
 var _ = helpers.Sequelize.Utils._;
 var lib = require('../index');
 
-describe(helpers.getTestDialectTeaser("sequelize-auto build"), function() {
+describe(helpers.getTestDialectTeaser("sequelize-auto-json build"), function() {
   after(function(done) {
     helpers.clearDatabase(this.sequelize, done);
   });
