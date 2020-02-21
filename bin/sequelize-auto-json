@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var sequelizeAuto = require('../');
+var sequelizeAuto = require('..');
 var path = require('path');
 var Sequelize = require('sequelize');
 var _ = Sequelize.Utils._;
