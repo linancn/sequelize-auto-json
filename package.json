@@ -1,6 +1,6 @@
 {
   "name": "sequelize-auto-json",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Automatically generate bare sequelize json models from your database.",
   "main": "index",
   "keywords": [
