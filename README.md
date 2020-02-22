@@ -1,6 +1,6 @@
 # Sequelize-Auto-Json
 
-[Sequelize-Auto-Json](https://github.com/linancn/sequelize-auto-json) is a command line interface generating json models for [SequelizeJS](https://github.com/sequelize/sequelize).
+[Sequelize-Auto-Json](https://gitee.com/nanlicas/sequelize-auto-json) is a command line interface generating json models for [SequelizeJS](https://github.com/sequelize/sequelize).
 
 Add Functions of converting existing database to json file.
 
