@@ -8,6 +8,7 @@
     "postgres",
     "sequelize",
     "sequelizejs",
+    "json",
     "mapper"
   ],
   "bin": {
