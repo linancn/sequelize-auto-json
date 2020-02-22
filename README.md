@@ -1,20 +1,15 @@
-# Sequelize-Auto
+# Sequelize-Auto-Json
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/sequelize/sequelize-auto.svg)](https://greenkeeper.io/)
+[Sequelize-Auto-Json](https://github.com/linancn/sequelize-auto-json) is a command line interface generating json models for [SequelizeJS](https://github.com/sequelize/sequelize).
 
-[![Build Status](http://img.shields.io/travis/sequelize/sequelize-auto/master.svg)](https://travis-ci.org/sequelize/sequelize-auto) [![Build status](https://ci.appveyor.com/api/projects/status/bf9lb89rmpj6iveb?svg=true)](https://ci.appveyor.com/project/durango/sequelize-auto) [![Dependency Status](https://david-dm.org/sequelize/sequelize-auto.svg)](https://david-dm.org/sequelize/sequelize-auto) [![Code Climate](https://codeclimate.com/github/sequelize/sequelize-auto/badges/gpa.svg)](https://codeclimate.com/github/sequelize/sequelize-auto) [![Test Coverage](https://codeclimate.com/github/sequelize/sequelize-auto/badges/coverage.svg)](https://codeclimate.com/github/sequelize/sequelize-auto/coverage)
+Add Functions of converting existing database to json file.
 
-Automatically generate models for [SequelizeJS](https://github.com/sequelize/sequelize) via the command line.
+Inspired and modified from [ozzysun](https://github.com/ozzysun/sequelize-auto).
 
-Support export json format
-
-Update To Sequelize 5.15.1
-
-add getModel function conver json file to model Object
 
 ## Install
 
-    npm install -g sequelize-auto
+    npm install -g sequelize-auto-json
 
 ## Prerequisites
 
@@ -243,7 +238,3 @@ You must setup a database called `sequelize_auto_test` first, edit the `test/con
 
     # sqlite only
     npm run test-sqlite
-
-## Projects Using Sequelize-Auto
-
-* [Sequelizer](https://github.com/andyforever/sequelizer)
