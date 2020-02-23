@@ -55,7 +55,7 @@ Example for MSSQL
 ### Use Json
   - Create Json
   ```
-  sequelize-auto -o "./models" -d dbName -h localhost -u username -p 3306 -x yourpassword -e mysql -j
+  sequelize-auto-json -o "./models" -d dbName -h localhost -u username -p 3306 -x yourpassword -e mysql -j
   ```
   - Build model from json
   ```
@@ -106,7 +106,7 @@ Example for MSSQL
 
 ## Example
 
-    sequelize-auto -o "./models" -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres -j
+    sequelize-auto-json -o "./models" -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres -j
 
 Produces a file/files such as ./models/Users.js which looks like:
 
