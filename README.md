@@ -43,7 +43,7 @@ Example for MSSQL
       -p, --port        Port number for database.
       -c, --config      JSON file for Sequelize's constructor "options" flag object as defined here: https://sequelize.readthedocs.org/en/latest/api/sequelize/
       -o, --output      What directory to place the models.
-      -e, --dialect     The dialect/engine that you're using: postgres, mysql, sqlite
+      -e, --dialect     The dialect/engine that you're using: postgres, mysql, sqlite, mssql
       -a, --additional  Path to a json file containing model definitions (for all tables) which are to be defined within a model's configuration parameter. For more info: https://sequelize.readthedocs.org/en/latest/docs/models-definition/#configuration
       -t, --tables      Comma-separated names of tables to import
       -T, --skip-tables Comma-separated names of tables to skip
@@ -52,7 +52,9 @@ Example for MSSQL
       -s, --schema      Database schema from which to retrieve tables
       -z, --typescript  Output models as typescript with a definitions file.
       -j  --json        Export json format model
-### Use Json
+
+### Use Json Option
+
   - Create Json
   ```
   sequelize-auto-json -o "./models" -d dbName -h localhost -u username -p 3306 -x yourpassword -e mysql -j
@@ -65,6 +67,9 @@ Example for MSSQL
   - json file format
   ```
   [
+    {
+      "tableName": "models"
+    },
     {
       "id": {
         "type": "DataTypes.INTEGER(11)",
@@ -98,75 +103,9 @@ Example for MSSQL
         "autoIncrement": false,
         "comment": "null"
       }
-    }, {
-      "tableName": "models"
     }
   ]
   ```
-
-## Example
-
-    sequelize-auto-json -o "./models" -d sequelize_auto_test -h localhost -u my_username -p 5432 -x my_password -e postgres -j
-
-Produces a file/files such as ./models/Users.js which looks like:
-
-    /* jshint indent: 2 */
-
-    module.exports = function(sequelize, DataTypes) {
-      return sequelize.define('Users', {
-        'id': {
-          type: DataTypes.INTEGER(11),
-          allowNull: false,
-          primaryKey: true,
-          autoIncrement: true
-        },
-        'username': {
-          type: DataTypes.STRING,
-          allowNull: true
-        },
-        'touchedAt': {
-          type: DataTypes.DATE,
-          allowNull: true
-        },
-        'aNumber': {
-          type: DataTypes.INTEGER(11),
-          allowNull: true
-        },
-        'bNumber': {
-          type: DataTypes.INTEGER(11),
-          allowNull: true
-        },
-        'validateTest': {
-          type: DataTypes.INTEGER(11),
-          allowNull: true
-        },
-        'validateCustom': {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
-        'dateAllowNullTrue': {
-          type: DataTypes.DATE,
-          allowNull: true
-        },
-        'defaultValueBoolean': {
-          type: DataTypes.BOOLEAN,
-          allowNull: true,
-          defaultValue: '1'
-        },
-        'createdAt': {
-          type: DataTypes.DATE,
-          allowNull: false
-        },
-        'updatedAt': {
-          type: DataTypes.DATE,
-          allowNull: false
-        }
-      }, {
-        tableName: 'Users',
-        freezeTableName: true
-      });
-    };
-
 
 Which makes it easy for you to simply [Sequelize.import](http://docs.sequelizejs.com/en/latest/docs/models-definition/#import) it.
 
