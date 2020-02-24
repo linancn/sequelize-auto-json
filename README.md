@@ -1,6 +1,6 @@
 # Sequelize-Auto-Json
 
-[Sequelize-Auto-Json](https://gitee.com/nanlicas/sequelize-auto-json) is a command line interface generating json models for [SequelizeJS](https://github.com/sequelize/sequelize).
+[Sequelize-Auto-Json](https://github.com/linancn/sequelize-auto-json) is a command line interface generating json models for [SequelizeJS](https://github.com/sequelize/sequelize).
 
 Add Functions of converting existing database to json file.
 
@@ -13,23 +13,7 @@ Inspired and modified from [ozzysun](https://github.com/ozzysun/sequelize-auto).
 
 ## Prerequisites
 
-You will need to install the correct dialect binding globally before using sequelize-auto.
-
-Example for MySQL/MariaDB
-
-`npm install -g mysql`
-
-Example for Postgres
-
-`npm install -g pg pg-hstore`
-
-Example for Sqlite3
-
-`npm install -g sqlite`
-
-Example for MSSQL
-
-`npm install -g mssql`
+The correct dialect npm dtatbase binding are included with sequelize-auto-json.
 
 ## Usage
 

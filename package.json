@@ -1,6 +1,6 @@
 {
   "name": "sequelize-auto-json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatically generate bare sequelize json models from your database.",
   "main": "index",
   "keywords": [
@@ -55,21 +55,21 @@
     "jsonfile": "^5.0.0",
     "loadsh": "0.0.4",
     "mkdirp": "^0.5.1",
+    "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
+    "pg": "^7.18.2",
+    "pg-hstore": "^2.3.2",
+    "sqlite3": "^4.0.0",
+    "tedious": "^8.0.1",
     "sequelize": "^5.15.1",
-    "yargs": "^8.0.1"
+    "yargs": "^15.1.0"
   },
   "devDependencies": {
     "chai": "^4.0.1",
     "cross-env": "^5.0.0",
     "istanbul": "^0.4.5",
-    "lcov-result-merger": "^2.0.0",
+    "lcov-result-merger": "^3.1.0",
     "mocha": "^4.0.0",
-    "mysql": "^2.18.1",
-    "nyc": "^11.0.1",
-    "pg": "^7.18.2",
-    "pg-hstore": "^2.3.2",
-    "sqlite3": "^4.0.0",
-    "tedious": "^8.0.1"
+    "nyc": "^15.0.0"
   }
 }
