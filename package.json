@@ -50,7 +50,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.1.5",
-    "eslint": "^3.19.0",
+    "eslint": "^6.8.0",
     "graceful-fs-extra": "^2.0.0",
     "jsonfile": "^5.0.0",
     "loadsh": "0.0.4",
