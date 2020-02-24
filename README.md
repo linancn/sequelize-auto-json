@@ -74,8 +74,8 @@ The correct dialect npm dtatbase binding are included with sequelize-auto-json.
         "autoIncrement": false,
         "comment": "null"
       },
-      "model": {
-        "type": "DataTypes.STRING(45)",
+      "weekday": {
+        "type": "DataTypes.ENUM(\"Sun\",\"Mon\",\"Tues\",\"Wed\",\"Thur\",\"Fri\",\"Sat\")",
         "allowNull": false,
         "autoIncrement": false,
         "comment": "null"
